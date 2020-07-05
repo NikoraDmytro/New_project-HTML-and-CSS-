@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>S2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="clearfix">
+        <div class="column-right">
+            <a href="../Landing_page/first_page.html" id="ToMainPage">На главную</a>
+            <div class="facilities">
+                <div class="PresentationImages">
+                    <img src="img/Товароучетная_система.png" alt="Товароучетная система" id="imgFirst">
+                    <img src="img/CRM.png" alt="CRM для торговли" id="imgSecond">
+                    <img src="img/Интеграция.jpg" alt="Интеграция" id="imgThird">
+                    <button id="small-circle"></button>>
+                    <button id="big-circle"></button>>
+                </div>
+                <div class="PresentationText">
+                    <div id="textFirst">
+                        <h3>Товароучетная система</h3>
+                        <h5>
+                            Управление товарами и ценами. Планирование закупок и контроль остатков. Резервы.
+                            Модификации.
+                            Инвентаризации.
+                        </h5>
+                    </div>
+                    <div id="textSecond">
+                        <h3>CRM для торговли</h3>
+                        <h5>
+                            История покупок, сегментация базы клиентов, бонусные программы лояльности. Статистика.
+                        </h5>
+                    </div>
+                    <div id="textThird">
+                        <h3>Интеграция</h3>
+                        <h5>
+                            CMS, CRM, рассылки, аналитика, банки, службы доставки. Экспорт в 1С:Бухгалтерию. Помощь с
+                            настройками.
+                        </h5>
+                    </div>
+                </div>
+                <div class="switcher">
+                    <button class="imgSwitcher" id="switch1" onclick="Change(1)"></button>
+                    <button class="imgSwitcher" id="switch2" onclick="Change(2)"></button>
+                    <button class="imgSwitcher" id="switch3" onclick="Change(3)"></button>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <h1 class="logo-corner">S2</h1>
+            <form class="sign_in">
+                <h2>Войти в кабинет</h2>
+                <h4>Для входа введите логин и Email, которые вы указывали при регистрации</h4>
+
+                <div class="UserData">
+                    <label for="user_email" style="padding: 0.875em;">Email</label>
+                    <input type="email" id="user_email" placeholder="ivan.lazarev@gmail.com">
+
+                    <label for="User_passworld" style="padding: 0.4375em;">Пароль</label>
+                    <input type="passworld" id="User_passworld" placeholder="passworld">
+                </div>
+
+                <input type="checkbox" id="Remember_me" value="True"><span>Запомнить меня</span>
+                <br>
+                <a id="EnterTheCabinet" href="../ClientOffice/Client_office.html">Войти в кабинет</a>
+
+                <div class="LinksForHelp">
+                    <h5>Нет аккаунта?</h5><a href="">Создать</a>
+                    <a href="" style="margin-top: 1em; display: block;">Забыли пароль</a>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
