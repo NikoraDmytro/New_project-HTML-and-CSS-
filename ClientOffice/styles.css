@@ -1,0 +1,506 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #F1F9FF;
+}
+
+.SideMenu{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 9.3%;
+    box-shadow: 0px 10px 10px rgba(26, 63, 156, 0.23);
+    background: linear-gradient(8.15deg, rgba(33, 60, 127, 0.88) 1.1%, #213B7E 98.95%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5%;
+    z-index: 2;
+}
+
+#ExtraButton{
+    visibility: hidden;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.SideMenu a{
+   margin-top: 34.2%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+   height: 10.3%;
+}
+
+#active{
+   border-left: 0.3em solid #FFFFFF;
+}
+
+.SideMenu img:not(:first-child){
+    height: 60.6%;
+    width: 34.2%;
+}
+
+.SideMenu .desc{
+    margin-top: 8.3%;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.SideMenu h1{
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+.UserIcon{
+    background: #FFFFFF;
+    border-radius: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.SideMenu h3{
+    width: 34.2%;
+    height: 4.55%;
+    margin-top: 34.2%;
+    color: #2F3648;
+}
+
+
+.TopPanel{
+    position: fixed;
+    top: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 8.7vh;
+    box-shadow: 0px 4px 10px rgba(26, 63, 156, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    z-index: 1;
+}
+
+
+.SpecialButton{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: normal;
+}
+
+.SpecialButton h5{
+    font-weight: normal;
+    font-size: 12px;
+    z-index: 6;
+}
+
+.TopPanel .SpecialButton{
+    background: rgba(144, 196, 239, 0.65);
+    padding: 0.4% 1.1% 0.4% 1.1%;
+    width: 20%;
+    min-width: 10em;
+    height: 48.5%;
+    z-index: 6;
+    box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2);
+    margin-left: 13%;
+    color: #FFFFFF;
+}
+
+
+.SpecialButton .UserIcon{
+    color: #000000;
+    z-index: 6;
+}
+
+.TopPanel .SpecialButton:nth-last-child(2){
+    margin-left: 4.15%;
+}
+
+.exit{
+    position: absolute;
+    left: 94.3%;
+    width: 2.3%;
+    height: 45.45%;
+}
+
+.vector{
+    z-index: 6;
+    cursor: pointer;
+}
+
+.TopPanel .SpecialButton .vector{
+    margin-left: 24.4%;
+    margin-top: 5%;
+    width: 10%;
+    height: 55%;
+}
+
+.TopPanel  [class*="Icon"]{
+    width: 12.4%;
+    height: 100%;
+    z-index: 6;
+    margin-right: 5.7%;
+}
+
+.TopPanel a{
+    display: flex;
+    align-items: center;
+    z-index: 6;
+}
+
+.UserInfo{
+    position: absolute;
+    margin-left: -1.1%;
+    background:  blue;
+    box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2);
+    border-radius: 10px;
+    width: 20%;
+    height: 168.18%;
+    min-height: 8em;
+    min-width: 10em;
+    top: 58.24%;
+    visibility: hidden;
+    z-index: 5;
+    display: flex;
+    flex-direction: row;
+    padding: 1.7% 0.93% 1.25% 1.1%;
+}
+
+
+.Pictures{
+    height: 100%;
+    width: 7%;
+    margin-right: 4.87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Pictures img{
+    width: 12px;
+    height: 12px;
+    margin-bottom: 141.6%;
+    vertical-align: middle;
+}
+
+.UserInformation{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UserInformation h5{
+    margin-bottom: 10.625%;
+    font-size: 11px;
+}
+
+form{
+    margin-left: 11.3%;
+    margin-top: 9.5%;
+    margin-right: 2.1875%;
+    width: 86.5%;
+    height: 86.55vh;
+    overflow-x: scroll;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(42, 68, 134, 0.1);
+    box-sizing: border-box;
+    border-radius: 15px 15px 0px 0px;
+}
+
+input[type="number"]{
+    border: 1px solid rgba(67, 81, 116, 0.4);
+    border-radius: 10px;
+}
+
+div.ButtonsAndFilters{
+    margin: 3.5% 4.87% 3% 5.7%;
+    height: 4.6%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.ButtonsAndFilters .SpecialButton{
+    width: 20.5%;
+}
+
+.ButtonsAndFilters .SpecialButton img{
+    width: 17.2%;
+    margin-right: 10.74%;
+}
+
+#BulkPrices h5{
+    margin: 0 16.75% 0 11.4%;
+}
+
+
+#BulkPrices .vector{
+    width: 8.4%;
+    height: 25%;
+}
+
+.ButtonsAndFilters #FindProducts{
+    background: #F2F9FF;
+    margin-right: 3.2%;
+    padding-left: 3%;
+    padding-right: 2.9%;
+    color: rgba(26, 63, 156, 0.53);
+}
+
+.ButtonsAndFilters #BulkPrices{
+    color: #2F3648;
+    border: 1px solid #BFD2E2;
+}
+
+.Filters {
+    width: 4%;
+    height: 100%;
+    border: 1px solid #BFD2E2;
+    border-radius: 5px;
+    background: #FFFFFF;
+    padding: 0;
+    position: absolute;
+    left: 100%;
+}
+
+.Filters img{
+    width: 60%;
+    height: 60%;
+}
+
+table{
+    height: 81%;
+}
+
+th{
+    height: 7vh;
+}
+
+td{
+    height: 8vh;
+}
+th,td{
+    vertical-align: middle;
+    line-height: 16px;
+    border-bottom: 1px solid #E5ECFF;
+}
+
+table th{
+    color: #535E7C;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+table td{
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1em;
+    text-align: center;
+    color: #2F3648;
+}
+
+.HelpIcon{
+   width: 10.2%;
+   height: 10.2%;
+}
+
+.tooltip:hover .tooltipContent{
+    visibility: visible;
+}
+
+.tooltipContent{
+    position: absolute;
+    visibility: hidden;
+}
+
+.tooltipContent{
+    width: 23.42%;
+    height: 12.44%;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2), 0px -2px 2px rgba(26, 63, 156, 0.2);
+    border-radius: 10px;
+    padding: 1% 1.1% 1% 1.1%;
+}
+
+.GameImg{
+    width: 30%;
+    height: 100%;
+}
+
+.tooltipContent p{
+    color: #2F3648;
+}
+
+
+.MakeOrder{
+    position: fixed;
+    top:90%;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    visibility: hidden;
+    background: #FFFFFF;
+    box-shadow: 10px 0px 10px rgba(26, 63, 156, 0.23);
+}
+
+.MakeOrder input{
+    float: right;
+    width: 8%;
+    margin-right: 7.13%;
+    position: relative;
+    top: 40%;
+    height: 39%;
+    box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2);
+    border-radius: 10px;
+    background: linear-gradient(0.37deg, rgba(33, 60, 127, 0.88) 1.1%, #213B7E 98.95%);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.MakeOrder div{
+    float: right;
+    width: fit-content;
+    height: 100%;
+    margin-right: 3.05%;
+}
+
+.MakeOrder div h5{
+    position: relative;
+    top:40%;
+    margin-bottom: 0.5em;
+}
+
+.ConfirmPanel{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 130%;
+    z-index: 10;
+    background: rgba(63, 78, 117, 0.19);
+    padding: 0;
+}
+
+.ConfirmBox{
+    position: relative;
+    top: 14.7%;
+    left: 28.51%;
+    width: 55.65%;
+    height: 55.65%;
+    overflow: scroll;
+    padding: 3.81% 4.15% 6.93% 5.89%;
+    background-color: #FFFFFF;
+}
+
+.Legend{
+    clear: both;
+    font-weight: 600;
+    text-align: center;
+    color: #2F3648;
+    margin-bottom: 6.81%;
+}
+
+.Close{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    float: right;
+}
+
+
+
+.ConfirmBox table{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(26, 63, 156, 0.2);
+    margin-bottom: 8.21%;
+    height: 42vh;
+    border-collapse: collapse;
+}
+
+.ConfirmBox table .Conclusion{
+    border-spacing: 1em;
+}
+
+.ConfirmBox table th{
+    height: 7.7vh;
+    font-weight: 600;
+    color: #2F3648;
+}
+
+.ConfirmBox table td{
+    height: 7.7vh;
+    color: #2F3648;
+    font-weight: normal;
+}
+
+.ConfirmBox .Conclusion td{
+    font-weight: 600;
+}
+
+.ConfirmBox .ConfirmButton{
+    float: right;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(26, 63, 156, 0.2);
+    height: 8.01%;
+    width: 33.67%;
+    font-weight: normal;
+}
+
+.ConfirmBox .ConfirmButton:last-of-type{
+    background: linear-gradient(0.37deg, rgba(33, 60, 127, 0.88) 1.1%, #213B7E 98.95%);
+    color: #FFFFFF;
+    margin-right: 5.2%;
+}
+
+@media screen and (max-width : 1000px){
+    .tooltipContent{
+    width: 34.42%;
+    height: 13.44%;
+}
+    .SideMenu{
+    width: 12%;
+   } 
+   form{
+    margin-left: 15%;
+}
+}
+
+@media screen and (max-width : 700px){
+.SideMenu{
+    width: 30%;
+    } 
+.SideMenu{
+        visibility: hidden;
+    }
+#ExtraButton{
+    visibility: visible;
+    position: absolute;
+    left: 15px;
+    width: 20%;
+    height: 6%;
+    margin-bottom: 2.5%;
+}
+.exit {
+    width: 5%;
+}
+form{
+    margin: 11% 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.tooltipContent{
+    width: 50.42%;
+    height: 14.44%;
+}
+.MakeOrder input{
+    width: 30%;
+}
+}

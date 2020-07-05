@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>S2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="SideMenu">
+        <img src="img/SideMenu.png" alt="SideMenu" id="ExtraButton" onclick="OpenOrCloseSideMenu()"><br>
+        <h1>S2</h1>
+        <h3 class="UserIcon">D</h3>
+        <a id="active">
+            <img src="img/listOfProducts.png" alt="ListOfProducts">
+            <h5 class="desc">Товары</h5>
+        </a>
+        <a href="../ClientOrders/Client_orders.html">
+            <img src="img/myOrders.png" alt="MyOrders">
+            <h5 class="desc">Мои заказы </h5>
+        </a>
+    </div>
+
+    <div class="TopPanel">
+        <span class="SpecialButton">
+            <img src="img/icon.jpg" alt="icon" class="ManagerIcon">
+            <h5>Менеджер S2</h5>
+            <img src="img/vector.png" alt="Arrow" class="vector" onclick="ShowInfo(0)">
+
+            <div class="UserInfo">
+                <div class="Pictures">
+                    <img src="img/MenIcon.png" alt="Icon">
+                    <img src="img/E-mail.png" alt="E-mail">
+                    <img src="img/telephon.png" alt="telephone">
+                </div>
+                <div class="UserInformation">
+                    <h5>Новикова Алина Викторовна</h5>
+                    <h5>keith.richards@example.com</h5>
+                    <h5>+380999834675</h5>
+                </div>
+            </div>
+        </span>
+        <span class="SpecialButton">
+            <h5 class="UserIcon">D</h5>
+            <h5>Клиент DODO</h5>
+            <img src="img/vector.png" alt="Arrow" class="vector" onclick="ShowInfo(1)">
+            <div class="UserInfo">
+                <div class="Pictures">
+                    <img src="img/MenIcon.png" alt="Icon">
+                    <img src="img/E-mail.png" alt="E-mail">
+                    <img src="img/telephon.png" alt="telephone">
+                </div>
+                <div class="UserInformation">
+                    <h5>Киселев Сергей Иванович</h5>
+                    <h5>keith.richards@example.com</h5>
+                    <h5>+380999834675</h5>
+                </div>
+            </div>
+        </span>
+        <a href="../Sign_in/Sign_in.html"><img src="img/exit.png" alt="Выйти из профиля" class="exit"></a>
+    </div>
+
+    <form>
+        <div class="ButtonsAndFilters">
+            <span class="SpecialButton" id="FindProducts">
+                <img src="img/findProduct.png" alt="Find">
+                <h5>Найти товар</h5>
+            </span>
+            <span class="SpecialButton" id="BulkPrices">
+                <h5>Оптовые цены</h5>
+                <img src="img/vector.png" alt="Arrow" class="vector">
+            </span>
+            <button class="Filters"><img src="img/Filters.png" alt="Filters"></button>
+        </div>
+        <table id="table">
+            <tr>
+                <th></th>
+                <th>Штрихкод</th>
+                <th>Артикул</th>
+                <th>Назва</th>
+                <th>Розмір коробки</th>
+                <th>Рекомендована роздрібна ціна</th>
+                <th>Залишок</th>
+                <th>Ціна з ПДВ</th>
+                <th>Замовлення</th>
+                <th>Сума замовлення</th>
+            </tr>
+            <script>FilltheTable(8) </script>
+            <script src="CreateTable.js"></script>
+        </table>
+        <script src="MakeOrder.js"></script>
+        <div class="MakeOrder">
+            <input type="button" value="Заказать" onclick="Confirm()">
+            <div class="StatisticValues">
+                <h5></h5>
+                <h5></h5>
+            </div>
+            <div class="statistic">
+                <h5>Количество</h5>
+                <h5>Сумма заказа</h5>
+            </div>
+            <script src="ConfirmOrder.js"></script>
+        </div>
+    </form>
+
+    </div>
+
+</body>
+
+</html>
