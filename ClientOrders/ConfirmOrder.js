@@ -10,7 +10,7 @@ Width = {
     Sum: "17.03%",
 }
 
-function Confirm() {
+function Confirm(NumberOfTable) {
     let div = document.createElement("div");
     div.setAttribute("class", "ConfirmPanel");
 
@@ -30,7 +30,7 @@ function Confirm() {
     Legend.setAttribute("class", "Legend");
     ConfirmBox.appendChild(Legend);
 
-    let Table = CreateShortyTable();
+    let Table = CreateShortyTable(NumberOfTable);
     ConfirmBox.appendChild(Table);
 
     let Cancel = document.createElement("button");
@@ -44,7 +44,7 @@ function Confirm() {
 
     let Order = document.createElement("button");
     Button_text = document.createElement("h5");
-    text = document.createTextNode("Заказать");
+    text = document.createTextNode("Заказать повторно");
     Order.setAttribute("class", "ConfirmButton");
     Order.setAttribute("onclick", "ClosePanel()")
     Button_text.appendChild(text);
@@ -68,20 +68,21 @@ function ClosePanel() {
     Panel.remove();
 }
 
-function CreateShortyTable() {
-    let Sum = document.getElementsByClassName("Sum");
-    let Add = document.getElementsByName("HowMany");
+function CreateShortyTable(NumberOfTable) {
+    let Table= document.getElementsByTagName("table")[NumberOfTable];
+    let Checkboxes =Table.getElementsByClassName("Add");
 
-    let Table = document.createElement("table");
+    let SmallTable = document.createElement("table");
+    
     let New_tr = document.createElement("tr");
     for (i in Classification) {
         let New_th = document.createElement("th");
         New_th.appendChild(document.createTextNode(Classification[i]));
         New_th.style.width = Width[i];
-        New_tr.appendChild(New_th)
+        New_tr.appendChild(New_th);
     }
     Table.appendChild(New_tr);
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < Table.length; i++) {
         if (Add[i].value > 0) {
             New_tr = document.createElement("tr");
             let Td_1 = document.createElement("td");

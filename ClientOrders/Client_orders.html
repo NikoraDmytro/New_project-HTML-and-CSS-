@@ -71,7 +71,7 @@
         </div>
         <table class="table">
             <tr>
-                <th></th>
+                <th><input type="checkbox" name="AddAllProducts" class="AddAll" value="0" onclick="ChooseAll(0)"></th>
                 <th>Штрихкод</th>
                 <th>Артикул</th>
                 <th>Назва</th>
@@ -85,7 +85,7 @@
         </table>
         
         <div class="MakeOrder">
-            <input type="button" value="Заказать повторно" onclick="Confirm()">
+            <input type="button" value="Заказать повторно" onclick="Confirm(0)">
             <div class="StatisticValues">
                 <h5></h5>
                 <h5></h5>
@@ -98,7 +98,7 @@
 
         <table class="table">
             <tr>
-                <th></th>
+                <th><input type="checkbox" name="AddAllProducts" class="AddAll" value="0" onclick="ChooseAll(1)"></th>
                 <th>Штрихкод</th>
                 <th>Артикул</th>
                 <th>Назва</th>
@@ -112,7 +112,7 @@
         </table>
         
         <div class="MakeOrder">
-            <input type="button" value="Заказать повторно" onclick="Confirm()">
+            <input type="button" value="Заказать повторно" onclick="Confirm(1)">
             <div class="StatisticValues">
                 <h5></h5>
                 <h5></h5>
@@ -125,6 +125,7 @@
         </div>
 
         <script src="CreateTable.js"></script>
+        <script src="ChooseAll.js"></script>
     </form>
 
     </div>

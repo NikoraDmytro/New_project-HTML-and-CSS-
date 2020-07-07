@@ -1,0 +1,26 @@
+function ChooseAll(NumberOfTable){
+    let AllChecboxes= 
+    document
+    .getElementsByTagName("table")[NumberOfTable]
+    .getElementsByClassName("Add");
+
+console.log(document.getElementsByClassName("Add"));
+
+    let MainCheckbox=
+    document
+    .getElementsByTagName("table")[NumberOfTable]
+    .getElementsByClassName("AddAll");
+
+    console.log(MainCheckbox);
+    console.log(MainCheckbox.checked);
+    console.log(MainCheckbox.checked == false);
+    if (MainCheckbox.checked==false) {
+        AllChecboxes.forEach((value) =>{
+            value.setAttribute("checked", "true")
+        });
+    }else {
+        AllChecboxes.forEach((value) =>{
+            value.checked= false;
+        });
+    }
+}

@@ -46,8 +46,7 @@ function FillTheTable(number, numberOfTable) {
                 NewElement = document.createElement('input');
                 NewElement.setAttribute("type", "checkbox");
                 NewElement.setAttribute("name", "AddProduct");
-                NewElement.setAttribute("readonly", "");
-                NewElement.setAttribute("onclick", `AddOrRemove(${j})`);
+                NewElement.setAttribute("onclick",`ChooseOne(${j},${numberOfTable})`);
             }
             if (i == 'order') {
                 NewElement = document.createElement('input');
@@ -121,7 +120,7 @@ function SumUp(number,numberOfTable) {
     let Price = document.getElementsByClassName("PriceWithVAT");
     let Rezalt = Add[realNumber].value * Price[realNumber].textContent;
     Sum[realNumber].innerHTML = Rezalt.toFixed(2) + "грн";
-    if (realNumber==3 || realNumber==6){
+    if (realNumber==2 || realNumber==5){
        SumAll(Add,Sum,numberOfTable);
     }
 }
@@ -131,9 +130,14 @@ function SumAll(Add, Sum,numberOfTable) {
     let Colov = 0;
     for (let number = 0; number < 3; number++) {
         let realNumber= number + numberOfTable*3;
-        console.log(Sum[realNumber]);
-        if (Sum[realNumber].textContent > 0) {
-            SumAll += Sum[realNumber].textContent;
+        let SumOfElement= Sum[realNumber].textContent;
+
+        SumOfElement= Number(SumOfElement.slice(0,-3));
+
+        console.log(SumOfElement);
+
+        if (SumOfElement > 0) {
+            SumAll += SumOfElement;
             Colov += Add[realNumber].value * 1;
         }
     }
